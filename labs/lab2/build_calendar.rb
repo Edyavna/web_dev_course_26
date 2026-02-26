@@ -19,7 +19,7 @@ daysOfTournament = []
 
 i = starttime
 while i < finishtime
-      if i.wday == 0  i.wday == 5  i.wday == 6
+      if i.wday == 0 || i.wday == 5 || i.wday == 6
                 countMatchDays += 1
                 daysOfTournament << i
       end
