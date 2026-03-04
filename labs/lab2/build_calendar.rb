@@ -89,6 +89,8 @@ while currentMatches < countMaxMatches
 
 end
 puts text
+
+
 def parse_and_format_calendar(input_string)
   
   matches_data = input_string.split(/(?=#\d+<\|)/).reject(&:empty?)
@@ -96,7 +98,6 @@ def parse_and_format_calendar(input_string)
   parsed_matches = []
   
   matches_data.each do |match_str|
-    # Извлекаем номер матча, дату, команды
     if match_str =~ /#(\d+)<\| \[(.*?),\s*\d+\],\s*(.*?),\s*(.*?)\s*\|/
       match_num = $1.to_i
       datetime_str = $2
